@@ -179,7 +179,7 @@ class DguVolumeReport(AtsReport):
             dgu_id = int(ws.cell_value(row, 0))
             node_id = int(ws.cell_value(row, 2))
             data_row = ws.row_values(row, 4, 124)
-            for i in range(0, 72, 5):
+            for i in range(0, 5*24, 5):
                 data.append((dgu_id, i // 5, node_id, data_row[i], data_row[i + 1], data_row[i + 2], data_row[i + 3], data_row[i + 4]))
             row += 1
 
